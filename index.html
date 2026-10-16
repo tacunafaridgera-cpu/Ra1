@@ -1,11 +1,66 @@
-><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestión Multi-Negocio - RA1</title>
 </head>
 <body>
-    
+
+    <h1>Sistema de Gestión de Personas y Múltiples Negocios</h1>
+    <p>Estudiante: Farid Gerardo Tapia Acuña</p>
+    <hr>
+
+    <!-- SECCIÓN 1: REGISTRAR PERSONA -->
+    <div>
+        <h2>1. Registrar Propietario</h2>
+        <label>Nombre completo:</label><br>
+        <input type="text" id="nombrePersona" placeholder="Ej. Carlos Mendoza"><br><br>
+        
+        <label>DNI / Documento:</label><br>
+        <input type="text" id="dniPersona" placeholder="Ej. 73456789"><br><br>
+        
+        <button onclick="registrarPersona()">Guardar Persona</button>
+    </div>
+
+    <br><hr>
+
+    <!-- SECCIÓN 2: REGISTRAR NEGOCIO -->
+    <div>
+        <h2>2. Registrar Negocio</h2>
+        <label>Seleccionar Propietario:</label><br>
+        <select id="selectPropietario">
+            <option value="">-- Seleccione Propietario --</option>
+        </select><br><br>
+
+        <label>Nombre del Negocio:</label><br>
+        <input type="text" id="nombreNegocio" placeholder="Ej. Bodega Don Carlos"><br><br>
+
+        <button onclick="registrarNegocio()">Vincular Negocio</button>
+    </div>
+
+    <br><hr>
+
+    <!-- SECCIÓN 3: TABLA DE RESULTADOS -->
+    <div>
+        <h2>3. Listado General de Propietarios y Negocios</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID Persona</th>
+                    <th>Propietario</th>
+                    <th>DNI</th>
+                    <th>Negocios Asociados</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+                <tr>
+                    <td colspan="4" align="center">No hay registros aún</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Enlazamos el archivo de lógica JavaScript -->
+    <script src="app.js"></script>
 </body>
 </html>
